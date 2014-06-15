@@ -1,0 +1,27 @@
+[user]
+	name = Diego Moreira
+	email = diegoalvesmoreira@gmail.com
+[core]
+	excludesfile = /Users/diego/.gitignore_global
+	editor = vim
+[color]
+	ui = true
+[alias]
+	gp = log --graph --abbrev-commit --decorate --all --oneline
+	gn = log --name-status --abbrev-commit
+	st = status
+  stl = stash list
+  sth = stash
+  sta = stash apply
+  std = stash drop
+	br = branch
+	ck = checkout
+	co = commit
+  ch = cherry-pick
+	lol = log --oneline
+	rb = rebase
+	mg = merge
+	dc = diff --cached
+	ut = reset HEAD
+	ld = ls-files --deleted
+
