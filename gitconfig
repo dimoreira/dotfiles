@@ -1,9 +1,3 @@
-[user]
-	name = Diego Moreira
-	email = diegoalvesmoreira@gmail.com
-[core]
-	excludesfile = /Users/diego/.gitignore_global
-	editor = vim
 [color]
 	ui = true
 [alias]
