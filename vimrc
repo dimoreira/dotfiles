@@ -27,7 +27,7 @@ set clipboard+=unamed
 " don't show intro
 set shortmess+=I
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' " required
@@ -42,6 +42,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade.git'
 Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'wavded/vim-stylus'
+Plugin 'stephpy/vim-yaml'
 
 call vundle#end()
 
@@ -59,6 +61,11 @@ set smartindent
 set listchars+=tab:➭\ 
 au! Filetype haml set noexpandtab
 au! Filetype sass set noexpandtab
+au! Filetype yaml set ts=4 sw=4 sts=4 et
+
+" Set syntax for no extension files
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 
 set background=dark
 let g:solarized_termcolors = 256 " fix colors of solarized
