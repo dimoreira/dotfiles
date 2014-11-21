@@ -27,7 +27,7 @@ set clipboard+=unamed
 " don't show intro
 set shortmess+=I
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' " required
