@@ -9,13 +9,16 @@ export LANG="en_US.UTF-8"
 export NODE_ENV="development"
 export RAILS_ENV="development"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 #DISABLE_CORRECTION="true"
 alias git='nocorrect git'
 alias zshconfig='vi ~/.zshrc'
 
 ### Golang options
-export GOBIN="/usr/local/go/bin"
 export GOPATH="$HOME/Documents/_projects/_go_projects"
+export ANDROID_PLATFORMTOOLS="$HOME/adt-bundle/sdk/platform-tools"
+export ANDROID_TOOLS="$HOME/adt-bundle/sdk/tools"
 
 ### Fix $TERM for use within tmux
 if [ $TMUX ]
@@ -25,7 +28,8 @@ else
 	export TERM="xterm-256color"
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$PATH:$GOBIN"
+export PATH="$PATH:/usr/local/heroku/bin"
 export PATH="$PATH:$GOPATH/bin"
+export GOBIN=$GOPATH/bin
+
+export PATH="$PATH:$ANDROID_PLATFORMTOOLS:$ANDROID_TOOLS"
